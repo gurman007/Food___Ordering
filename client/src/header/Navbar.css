@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.menuIcon {
+  display: none;
+}
+.nav__left {
+  -webkit-animation: dropLeft 1.5s ease-in-out;
+  animation: dropLeft 1.5s ease-in-out;
+}
+.nav__right {
+  -webkit-animation: dropRight 1.5s ease-in-out;
+  animation: dropRight 1.5s ease-in-out;
+}
+
+@media only screen and (max-width: 900px) {
+  .menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    -webkit-animation: dropDown 1s ease-in-out;
+    animation: dropDown 1s ease-in-out;
+  }
+  .menuIcon {
+    display: block;
+    position: absolute;
+    top: 1rem;
+    right: 0px;
+    cursor: pointer;
+    -webkit-animation: dropRight 1.5s ease-in-out;
+    animation: dropRight 1.5s ease-in-out;
+  }
+  .nav__mid {
+    margin-left: 0.5rem;
+    margin-right: 4rem;
+  }
+  .nav__right {
+    display: none;
+  }
+}
